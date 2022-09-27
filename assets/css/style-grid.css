@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --azulclaro: #48D6ED;
+  --azuloscuro: rgb(51, 122, 183);
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #B2B3B3;
+  --fondo: #FFFEFC;
+  --verdeazul: #157A8A;
+  --Magenta: #9C2759;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Marcellus', serif;
+}
+#container-grid{
+    display: grid;
+    grid-template: 
+        "header" auto
+        "main" auto
+        "footer" auto;
+}
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+        "logo"
+        "nav";
+}
+.logo{
+    grid-area: logo;
+    display: grid;
+    grid-template-areas: 
+    "logo-img menu-bars" auto/auto;
+    background-color: var(--negro2);
+    padding: 1rem;
+}
+.logo img{
+    grid-area: logo-img;
+    width: 30%;
+}
+.logo i{
+    grid-area: menu-bars;
+    color: var(--blanco);
+    font-size: 2rem;
+    justify-self: right;
+    align-self: center;
+}
+nav{
+    grid-area: nav;
+    display: grid;
+    background-color: rgba(1,10,52,0.838);
+    text-align: center;
+    padding: 0rem 0rem;
+    font-family: 'Marcellus', serif;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    margin-top: 4rem;
+}
+nav hr{
+    width: 90%;
+    color: var(--blanco);
+    border-width: 0.01rem;
+    border-style: solid;
+    justify-self: center;
+    margin: 1rem 0;
+}
+nav a{
+    font-size: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+    
+}
+nav button{
+    font-family: 'Marcellus', serif;
+    font-size: 1rem;
+    background-color: transparent;
+    color: var(--blanco);
+    padding: 0.5rem;
+    margin: 1rem;
+}
+a:hover{
+    background-color: #0B3860;
+}
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "description"
+        "feature"
+        "ubicacion"
+        "opiniones";
+}
+#banner{
+    grid-area: banner;
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url(../img/slide1.jpg);
+    height: 200px;
+    background-size: cover;
+    background-position: 55% 45%;
+    position: relative;
+    z-index: 0;
+}
+.text_banner{
+    background-color: rgb(0,0,0,0.3);
+    color: var(--blanco);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+}
