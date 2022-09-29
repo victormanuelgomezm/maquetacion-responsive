@@ -407,9 +407,6 @@ a:hover{
         flex-direction: column;
         justify-content: space-around;
     }
-
-
-
 }
 /*Resolución resoluciones macro*/
 @media screen and (min-width:1308px){
